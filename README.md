@@ -8,7 +8,8 @@ Mapbox provides a handy API endpoint for fetching museums around a location(youw
 free account for getting an API key to use their API).
 As an example when doing a request to /museums?lat=52.494857&lng=13.437641 would
 generate a response similar to:
-{
+
+`{
   "10999": ["Werkbundarchiv – museum of things"],
   "12043": ["Museum im Böhmischen Dorf"],
   "10179": [
@@ -18,6 +19,7 @@ generate a response similar to:
   ],
   "12435": ["Archenhold Observatory"]
  }
+ `
  
  # initial considerations
  
