@@ -2,7 +2,7 @@ require "json"
 require "open-uri"
 
 def museums(long, lat)
-  url = "https://api.mapbox.com/geocoding/v5/mapbox.places/museum.json?type=poi&proximity=#{long},#{lat}?&access_token=pk.eyJ1IjoiZWNvbm9taWMxODAxIiwiYSI6ImNsYTJuNzEzcjBqdzgzd3A5YnJ4aWRpZTAifQ.dCd6Lx2csqaemAfs5TsKYA"
+  url = "https://api.mapbox.com/geocoding/v5/mapbox.places/museum.json?type=poi&proximity=#{long},#{lat}?&access_token="
   response = URI.open(url).read
   museums_raw = JSON.parse(response)
 
