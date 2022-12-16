@@ -6,7 +6,6 @@ def museums(long, lat)
   response = URI.open(url).read
   museums_raw = JSON.parse(response)
 
-
   results = {}
 
   museums_raw["features"].each do |museum|
@@ -18,9 +17,3 @@ def museums(long, lat)
   end
   results
 end
-# -0.125096,51.522184
-# 38.72174555464688, -9.136853310424444
-long = "-9.136853310424444"
-lat = "38.72174555464688"
-
-p museums(long, lat)
