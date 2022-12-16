@@ -18,8 +18,3 @@ def museums(long, lat)
   end
   results
 end
-
-long = "-0.125096"
-lat = "51.522184"
-
-p museums(long, lat)
