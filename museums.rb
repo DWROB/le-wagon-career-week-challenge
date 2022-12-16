@@ -6,15 +6,21 @@ def museums(long, lat)
   response = URI.open(url).read
   museums_raw = JSON.parse(response)
 
+
   results = {}
 
   museums_raw["features"].each do |museum|
-    results[museum["context"][1]["text"]] = museum["text"]
+    museum["context"].each do |context|
+      if context["id"].include? "postcode"
+        results[context["text"]] = museum["text"]
+      end
+    end
   end
   results
 end
+# -0.125096,51.522184
+# 38.72174555464688, -9.136853310424444
+long = "-9.136853310424444"
+lat = "38.72174555464688"
 
-long = "13.437641"
-lat = "52.494857"
-
-museums(long, lat)
+p museums(long, lat)
